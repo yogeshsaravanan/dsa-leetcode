@@ -1,0 +1,44 @@
+# class Solution:
+#     
+#     def find_index(self,c,ori_str):
+#         for i in range(len(ori_str)):
+#             if ori_str[i] == c:
+#                 return ori_str[i:]
+#         return ori_str
+        
+#     def appendCharacters(self, s: str, t: str) -> int:
+#         sub_str=''
+#         count=0
+#         if len(t) == 1:
+#             if t in s:
+#                 return 0
+#             else:
+#                 return 1
+#         for i in range(0,len(t)):
+#             if t[i] in s:
+#                 s= self.find_index(t[i],s)
+#                 # n=s.index(t[i])
+#                 # s=s[n:]
+#                 count+=1
+#             else:
+#                 break
+#         print(sub_str)class Solution:
+#     def appendCharacters(self, s: str, t: str) -> int:
+#         i, j = 0, 0
+#         while i < len(s) and j < len(t):
+#             if s[i] == t[j]:
+#                 j += 1
+#             i += 1
+#         return len(t) - j
+# #         return len(t)-count
+
+
+class Solution:
+    def appendCharacters(self, s: str, t: str) -> int:
+        i, j = 0, 0
+        while i < len(s) and j < len(t):
+            if s[i] == t[j]:
+                j += 1
+            i += 1
+        return len(t) - j
+        
